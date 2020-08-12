@@ -5,6 +5,16 @@ from pathlib import Path
 from dotenv import find_dotenv, load_dotenv
 
 
+
+# def get_sp500_from_csv():
+#     current_dir = os.getcwd() 
+#     project_dir = os.path.abspath(os.path.join(current_dir, os.pardir))
+#     sym_df = pd.read_csv(project_dir + '/data/raw/SP500_current.csv')
+
+
+
+
+
 @click.command()
 @click.argument('input_filepath', type=click.Path(exists=True))
 @click.argument('output_filepath', type=click.Path())
@@ -14,6 +24,7 @@ def main(input_filepath, output_filepath):
     """
     logger = logging.getLogger(__name__)
     logger.info('making final data set from raw data')
+    # get_sp500_from_csv()
 
 
 if __name__ == '__main__':
